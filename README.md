@@ -1,7 +1,7 @@
 # Wuwa Config AI
-This repository is for obtaining recommended graphics configuration results for the game Wuthering Waves based on AI results.
+This repository is for obtaining recommended graphics configuration results for the game Wuthering Waves based on AI results. [For Mobile Version]
 
-> Repository ini untuk mendapatkan hasil rekomendasi konfigurasi grafik untuk game Wuthering Waves berdasarkan hasil AI
+> Repository ini untuk mendapatkan hasil rekomendasi konfigurasi grafik untuk game Wuthering Waves berdasarkan hasil AI [Untuk smartphone]
 
 ## How to Use
 - Create Project on `https://console.firebase.google.com/`
