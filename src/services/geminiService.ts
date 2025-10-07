@@ -20,3 +20,16 @@ Format the .ini configuration clearly with sections and comments.`;
   const response = result.response;
   return response.text();
 }
+
+// lupa booking api key le
+export async function checkGeminiKey(apiKey: string): Promise<boolean> {
+  try {
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' });
+    const result = await model.generateContent('ping');
+    return !!result.response.text();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error) {
+    return false;
+  }
+}
