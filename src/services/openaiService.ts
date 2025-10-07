@@ -38,3 +38,14 @@ Format the .ini configuration clearly with sections and comments.`
   const data = await response.json();
   return data.choices[0].message.content;
 }
+
+export async function checkOpenAIKey(apiKey: string): Promise<boolean> {
+  try {
+    const response = await fetch('https://api.openai.com/v1/models', {
+      headers: { Authorization: `Bearer ${apiKey}` },
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
