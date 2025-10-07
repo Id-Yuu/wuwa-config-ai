@@ -2,13 +2,13 @@ export const formFields = [
   {
     name: 'brand',
     label: 'Brand',
-    placeholder: 'e.g., Samsung, Xiaomi',
+    placeholder: 'e.g., Poco Hp tlol, Xiaomi',
     colSpan: 'md:col-span-1'
   },
   {
     name: 'model',
     label: 'Model',
-    placeholder: 'e.g., Galaxy S23, Poco F5',
+    placeholder: 'e.g., Galaxy S23, Poco F6',
     colSpan: 'md:col-span-1'
   },
   {
