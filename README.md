@@ -3,7 +3,7 @@ This repository is for obtaining recommended graphics configuration results for 
 
 > Repository ini untuk mendapatkan hasil rekomendasi konfigurasi grafik untuk game Wuthering Waves berdasarkan hasil AI [Untuk smartphone]
 
-## How to Use
+## How to Use [Gemini API Key]
 1. Create Project on `https://console.firebase.google.com/`
 2. Create API Key on `https://aistudio.google.com/api-keys`
 3. Import Project (cannot create, only import from firebase project)
