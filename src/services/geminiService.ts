@@ -21,14 +21,11 @@ Format the .ini configuration clearly with sections and comments.`;
   return response.text();
 }
 
-// Connectivity check for API key
 export async function checkGeminiKey(apiKey: string): Promise<boolean> {
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
-    // Use a trivial prompt to check connectivity
     const result = await model.generateContent('ping');
-    // If we get a response, the key works
     return !!result.response.text();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {

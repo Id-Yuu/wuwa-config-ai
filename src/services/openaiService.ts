@@ -39,7 +39,6 @@ Format the .ini configuration clearly with sections and comments.`
   return data.choices[0].message.content;
 }
 
-// services/openaiService.ts
 export async function checkOpenAIKey(apiKey: string): Promise<boolean> {
   try {
     const response = await fetch('https://api.openai.com/v1/models', {
