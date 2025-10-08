@@ -17,13 +17,13 @@ export default function Recommendations({ recommendations }: RecommendationsProp
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
+    <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6">
       <div className="flex items-center gap-2 mb-4">
         <Settings className="w-6 h-6 text-blue-600" />
-        <h2 className="text-xl font-semibold text-gray-800">Recommendations</h2>
+        <h2 className="text-lg sm:text-xl font-semibold text-gray-800">Recommendations</h2>
       </div>
-      <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
-        <div className="whitespace-pre-wrap">{formatRecommendations(recommendations)}</div>
+      <div className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed overflow-y-auto">
+        <div className="whitespace-pre-line">{formatRecommendations(recommendations)}</div>
       </div>
     </div>
   );
