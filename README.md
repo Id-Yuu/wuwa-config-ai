@@ -9,14 +9,47 @@ This repository is for obtaining recommended graphics configuration results for 
 3. Import Project (cannot create, only import from firebase project)
 4. Copy API KEY And Paste
 
-## Install Local
-```
-git clone https://github.com/Id-Yuu/wuwa-config-ai.git
-cd wuwa-config-ai
+## Run Locally
 
-npm i
-npm run dev
+Clone the project
+
+```bash
+git clone https://github.com/Id-Yuu/wuwa-config-ai.git
+```
+
+Go to the project directory
+
+```bash
+cd wuwa-config-ai
+```
+
+Install dependencies
+
+```bash
+npm install
 
 // if error use this command
 npm i -f
+```
+
+Start the server
+
+```bash
+npm run start
+```
+
+
+## Usage/Prompt
+
+```javascript
+wuwa-config-ai/src/
+├── App.tsx
+├── data/
+│   ├── formFields.ts
+│   ├── promptGemini.ts // Feel free to change your own prompt
+│   └── promptOpenai.ts // Feel free to change your own prompt
+├── services/
+│   ├── geminiService.ts // can be changed to your own model
+│   └── openaiService.ts // can be changed to your own model
+└── types.ts
 ```
