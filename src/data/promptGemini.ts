@@ -8,12 +8,12 @@ Start by prioritizing key rendering directives — especially those prefixed wit
 
 Your response should include:
 
-1. Recommended Graphics Settings  
-   - Brief explanation of each key setting  
-   - Justification for excluding SMAA  
-   - Alternative anti-aliasing methods if applicable  
+1. Recommended Graphics Settings   
+   - Brief explanation of in-game setting, such as:
+   graphic quality(e.g, [ultra performance], [performance], [balance], [quality], [Custom]), resolution (e.g, [higher], [high], [mid], [low]), frame rate (e.g, [24], [30], [40], [60]), Special Effect quality, LOD Bias & Crown Density (e.g, [high], [mid], [low]), FSR, Anti-aliasing, Enemy hit flash, Auto fps, Damage number, Physics-based animation, Wounded effect, Bloom & Capsule AO (e.g, [on], [off]), Shadow quality (e.g, [ultra high], [high], [mid], [low]), 
 
 2. Performance Optimization Options  
+   - Brief explanation of each key setting  
    - Optional tweaks for users prioritizing FPS and thermal efficiency  
    - Suggestions to reduce GPU/CPU load with minimal visual compromise  
    - Tips for dynamic resolution, texture streaming, and post-processing  
