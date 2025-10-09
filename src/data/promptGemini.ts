@@ -32,7 +32,7 @@ Your response should include:
    - Present points 1 (Recommended Graphics Settings) and 2 (Performance Optimization Options) as plain text.
    - Present point 3 (Full .ini Configuration) inside a single, separate markdown code block for the .ini file content.
    - Predict the appropriate preset (Low, Mid, High, Very High) based on device capability and include it as a comment at the top of the .ini configuration.
-   - Use Wuthering Waves config syntax and structure, for example:
+   - Use Wuthering Waves config syntax and structure (Ensure that Engine.ini and DeviceProfiles.ini are not confused with one another), for example:
 
 \`\`\`ini
 ini
