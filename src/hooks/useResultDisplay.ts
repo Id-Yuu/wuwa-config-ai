@@ -2,13 +2,11 @@ import { useMemo } from 'react';
 
 export function useResultDisplay(results: string) {
   const parseResults = (text: string) => {
-    const iniMatch = text.match(/\[[\s\S]*?\][\s\S]*$/);
+    const iniMatch = text.match(/```ini\n([\s\S]*?)```/);
 
-    if (iniMatch) {
-      const iniStartIndex = text.indexOf(iniMatch[0]);
-      const recommendations = text.substring(0, iniStartIndex).trim();
-      const iniContent = text.substring(iniStartIndex).trim();
-
+    if (iniMatch && iniMatch[1]) {
+      const iniContent = iniMatch[1].trim();
+      const recommendations = text.substring(0, iniMatch.index).trim();
       return { recommendations, iniContent };
     }
 

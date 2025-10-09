@@ -34,8 +34,9 @@ Your response should include:
    - Predict the appropriate preset (Low, Mid, High, Very High) based on device capability and include it as a comment at the top of the .ini configuration.
    - Use Wuthering Waves config syntax and structure, for example:
 
-"ini
-; Engine.ini
+\`\`\`ini
+ini
+; Start Engine.ini
 ; Recommended preset: High
 [/Script/Engine.RendererSettings]
 ; Kuro-specific fidelity controls
@@ -56,9 +57,9 @@ r.FidelityFX.FSR.RCAS.Sharpness=0.6
 r.TemporalAA.MobileUpsampling=1
 r.TemporalAA.MobileStaticFrameWeight=0.25
 r.TemporalAA.MobileFrameWeight=0.25
+; end of Engine.ini
 
-
-; DeviceProfiles.ini
+; Start DeviceProfiles.ini
 [Android_High DeviceProfile]
 CVars=r.MobileContentScaleFactor=1.5 ; Scales resolution for performance
 CVars=r.SecondaryScreenPercentage.GameViewport=83 ; Slightly reduced internal resolution
@@ -67,5 +68,6 @@ CVars=r.imp.SSMbScaleLod1=0.0 ; No impostor scaling for LOD1
 
 [Android_High DeviceProfile]
 BaseProfileName=Android_High ; Assigns the appropriate preset based on hardware
-"
+; end of DeviceProfiles.ini
+\`\`\`
 `
