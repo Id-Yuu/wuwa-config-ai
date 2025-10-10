@@ -40,6 +40,16 @@ ini
 ; Recommended preset: High
 [/Script/Engine.RendererSettings]
 ; Kuro-specific fidelity controls
+; Default value - 0
+; Enable/disable landscape SSR
+; Using this can remove shadows from grass
+r.Mobile.EnableLandscapeSSR=1
+; May improve Vulkan stability/performance
+r.Vulkan.RobustBufferAccess=0
+r.Vulkan.DescriptorSetLayoutMode=0
+; 0: Disable | 1: Enable
+; Lowers FPS to 30 when CPU temp over 65°C
+r.Kuro.AutoCoolEnable=1
 r.Kuro.KuroBloomStreak=0 ; Disable bloom streaks for clarity
 r.Kuro.Foliage.MobileNearCullDistanceMax=6000 ; Near foliage culling
 r.Kuro.Foliage.MobileMiddleCullDistanceMax=10000 ; Mid-range foliage culling
