@@ -1,4 +1,6 @@
-export const formFields = [
+import { type FormField } from '../types';
+
+export const formFields: FormField[] = [
   {
     name: 'brand',
     label: 'Brand',

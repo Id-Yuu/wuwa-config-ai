@@ -1,11 +1,4 @@
-interface InputFieldProps {
-  name: string;
-  label: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-  colSpan?: string;
-}
+import { type InputFieldProps } from '../../types';
 
 export default function InputField({ name, label, value, onChange, placeholder, colSpan = 'md:col-span-1' }: InputFieldProps) {
   return (

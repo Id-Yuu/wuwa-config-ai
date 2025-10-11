@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { type FormData } from '../types';
 
 export const useSpecificationForm = (onSubmit: (specifications: string) => void) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     brand: '',
     model: '',
     chipset: '',

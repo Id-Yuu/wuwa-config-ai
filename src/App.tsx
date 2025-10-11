@@ -1,7 +1,7 @@
 import { Sparkles } from 'lucide-react';
-import SpecificationForm from './components/SpecificationForm';
 import ResultDisplay from './components/ResultDisplay';
 import ApiConfiguration from './components/ApiConfiguration';
+import SpecificationForm from './components/SpecificationForm';
 import { useWuwaConfig } from './hooks/useWuwaConfig';
 
 function App() {

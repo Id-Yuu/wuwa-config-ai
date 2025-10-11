@@ -1,10 +1,7 @@
-import { useResultDisplay } from '../hooks/useResultDisplay';
+import { type ResultsDisplayProps } from '../types';
 import IniDisplay from './partials/IniDisplay';
 import Recommendations from './partials/Recommendations';
-
-interface ResultsDisplayProps {
-  results: string;
-}
+import { useResultDisplay } from '../hooks/useResultDisplay';
 
 export default function ResultDisplay({ results }: ResultsDisplayProps) {
   const {

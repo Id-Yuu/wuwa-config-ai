@@ -1,16 +1,6 @@
-import type { FC, FormEvent } from 'react';
+import type { FC } from 'react';
 import { Key } from 'lucide-react';
-import type { AIModel } from '../types';
-
-interface ApiConfigurationProps {
-  apiKey: string;
-  setApiKey: (key: string) => void;
-  selectedModel: AIModel;
-  setSelectedModel: (model: AIModel) => void;
-  handleApiKeySubmit: (e: FormEvent) => void;
-  isCheckingKey: boolean;
-  error: string;
-}
+import type { AIModel, ApiConfigurationProps } from '../types';
 
 const ApiConfiguration: FC<ApiConfigurationProps> = ({
   apiKey,

@@ -1,14 +1,10 @@
-import { Smartphone } from 'lucide-react';
-import { useSpecificationForm } from '../hooks/useSpecificationForm';
-import { formFields } from '../data/formFields';
-import InputField from './partials/InputField';
 import { useState } from 'react';
+import { Smartphone } from 'lucide-react';
+import { type SpecificationFormProps } from '../types';
+import InputField from './partials/InputField';
+import { formFields } from '../data/formFields';
 import { recommendationPrompt } from '../data/promptGemini';
-
-interface SpecificationFormProps {
-  onSubmit: (specifications: string) => void;
-  isLoading: boolean;
-}
+import { useSpecificationForm } from '../hooks/useSpecificationForm';
 
 export default function SpecificationForm({ onSubmit, isLoading }: SpecificationFormProps) {
   const [prompt, setPrompt] = useState('');

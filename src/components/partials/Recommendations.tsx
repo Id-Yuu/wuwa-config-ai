@@ -1,10 +1,8 @@
 import { Settings } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-
-interface RecommendationsProps {
-  recommendations: string;
-}
+import ReactMarkdown from 'react-markdown';
+import { remarkCustomStyling } from '../../utils/remarkPlugins';
+import { type RecommendationsProps } from '../../types';
 
 export default function Recommendations({ recommendations }: RecommendationsProps) {
   return (
@@ -13,8 +11,8 @@ export default function Recommendations({ recommendations }: RecommendationsProp
         <Settings className="w-6 h-6 text-blue-600" />
         <h2 className="text-lg sm:text-xl font-semibold text-gray-800">Recommendations</h2>
       </div>
-      <div className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed overflow-y-auto">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      <div className="text-sm sm:text-base max-w-none text-gray-700 leading-relaxed overflow-y-auto">
+        <ReactMarkdown remarkPlugins={[remarkGfm, remarkCustomStyling]}>
           {recommendations}
         </ReactMarkdown>
       </div>

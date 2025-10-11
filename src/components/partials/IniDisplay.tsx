@@ -1,10 +1,5 @@
 import { FileText, Download } from 'lucide-react';
-
-interface IniDisplayProps {
-  iniContent: string;
-  onCopy: () => void;
-  onDownload: () => void;
-}
+import { type IniDisplayProps } from '../../types';
 
 export default function IniDisplay({ iniContent, onCopy, onDownload }: IniDisplayProps) {
   return (
