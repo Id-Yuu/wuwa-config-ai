@@ -35,21 +35,29 @@ npm i -f
 Start the server
 
 ```bash
-npm run start
+npm run dev
 ```
 
 
 ## Usage/Prompt
 
-```javascript
-wuwa-config-ai/src/
-├── App.tsx
-├── data/
-│   ├── formFields.ts
-│   ├── promptGemini.ts // Feel free to change your own prompt
-│   └── promptOpenai.ts // Feel free to change your own prompt
-├── services/
-│   ├── geminiService.ts // can be changed to your own model
-│   └── openaiService.ts // can be changed to your own model
-└── types.ts
+```js
+// wuwa-config-ai/src/data/promptGemini.ts
+
+export const recommendationPrompt = `
+--> _Your_Prompt_
+  
+  {specifications}
+  
+--> _Your_Prompt_
+
+  \`\`\`ini 
+  ini
+
+--> _Your_Command_Prompt_
+
+  \`\`\` 
+`
 ```
+
+> **Note**: Every new patch update `_Your_Command_Prompt_` need to be update, following kuro command (`r.Kuro._this_config_`). But this is not important because u can review & editable while using this tools.
