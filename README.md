@@ -1,4 +1,9 @@
 # Wuwa Config AI
+
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwuwa-config-ai.pages.dev%2F&style=flat)
+![GitHub repo size](https://img.shields.io/github/repo-size/id-yuu/wuwa-config-ai?style=flat)
+
+
 This repository is for obtaining recommended graphics configuration results for the game Wuthering Waves based on AI results. [For Mobile Version]
 
 > Repository ini untuk mendapatkan hasil rekomendasi konfigurasi grafik untuk game Wuthering Waves berdasarkan hasil AI [Untuk smartphone]
