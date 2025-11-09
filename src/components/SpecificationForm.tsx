@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Smartphone } from 'lucide-react';
-import { type SpecificationFormProps } from '../types';
+import { type SpecificationFormProps, type FormField } from '../types';
 import InputField from './partials/InputField';
+import SelectField from './partials/SelectField';
 import { formFields } from '../data/formFields';
 import { recommendationPrompt } from '../data/promptGemini';
 import { useSpecificationForm } from '../hooks/useSpecificationForm';
@@ -53,17 +54,32 @@ export default function SpecificationForm({ onSubmit, isLoading }: Specification
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {formFields.map((field) => (
-          <InputField
-            key={field.name}
-            name={field.name}
-            label={field.label}
-            value={formData[field.name as keyof typeof formData]}
-            onChange={handleChange}
-            placeholder={field.placeholder}
-            colSpan={field.colSpan}
-          />
-        ))}
+        {formFields.map((field: FormField) => {
+          if (field.type === 'select') {
+            return (
+              <SelectField
+                key={field.name}
+                name={field.name}
+                label={field.label}
+                value={formData[field.name as keyof typeof formData]}
+                onChange={handleChange}
+                options={field.options || []}
+                colSpan={field.colSpan}
+              />
+            );
+          }
+          return (
+            <InputField
+              key={field.name}
+              name={field.name}
+              label={field.label}
+              value={formData[field.name as keyof typeof formData]}
+              onChange={handleChange}
+              placeholder={field.placeholder || ''}
+              colSpan={field.colSpan}
+            />
+          );
+        })}
       </div>
 
       <button

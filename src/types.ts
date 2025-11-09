@@ -21,8 +21,10 @@ export interface FormData {
 export interface FormField {
   name: keyof FormData;
   label: string;
-  placeholder: string;
+  placeholder?: string;
   colSpan?: string;
+  type?: 'text' | 'select';
+  options?: string[];
 }
 
 // utils/remarkPlugins.ts
@@ -65,6 +67,15 @@ export interface InputFieldProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
   colSpan?: string;
+}
+
+export interface SelectFieldProps {
+    name: string;
+    label: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+    options: string[];
+    colSpan?: string;
 }
 
 export interface ResultsDisplayProps {
