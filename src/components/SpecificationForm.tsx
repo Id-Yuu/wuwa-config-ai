@@ -28,17 +28,17 @@ export default function SpecificationForm({ onSubmit, isLoading }: Specification
     return (
       <form onSubmit={handlePromptSubmit} className="space-y-4">
         <div className="flex items-center gap-2 mb-6">
-          <h2 className="text-xl font-semibold text-gray-800">Review and Edit Prompt</h2>
+          <h2 className="text-xl font-semibold text-gray-800 dark:text-white">Review and Edit Prompt</h2>
         </div>
         <textarea
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
-          className="w-full h-48 p-2 border rounded-md bg-gray-50"
+          className="w-full h-48 p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors"
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="w-full bg-blue-600 dark:bg-blue-700 text-white py-3 rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {isLoading ? 'Analyzing...' : 'Get Recommendations'}
         </button>
@@ -49,8 +49,8 @@ export default function SpecificationForm({ onSubmit, isLoading }: Specification
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="flex items-center gap-2 mb-6">
-        <Smartphone className="w-6 h-6 text-blue-600" />
-        <h2 className="text-xl font-semibold text-gray-800">Smartphone Specifications</h2>
+        <Smartphone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+        <h2 className="text-xl font-semibold text-gray-800 dark:text-white">Smartphone Specifications</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
